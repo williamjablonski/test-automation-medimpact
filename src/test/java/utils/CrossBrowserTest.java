@@ -13,9 +13,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class CrossBrowserTest extends DriverTestInstance{
 
-	//final String chromeBinary = "/Application/chrome.exe";
-	final String chromeBinary = "/Users/admin/Downloads/chromedriver"; 
-	final String webdriverChromeBinary = "/Users/admin/Downloads/chromedriver";
+	////final String chromeBinary = "/Application/chrome.exe";
+	// mac
+	//final String chromeBinary = "/Users/admin/Downloads/chromedriver"; 
+	//final String webdriverChromeBinary = "/Users/admin/Downloads/chromedriver";
+	// ubuntu 20
+	final String chromeBinary = "/usr/bin/chromedriver"; 
+	final String webdriverChromeBinary = "/usr/bin/chromedriver";
+	
 	final String ieDriverServer = "C:/Java/drivers/IEDriverServer_x64_2.39.0/IEDriverServer.exe";
 	//final String phantomjsBinaryPath = "C:/Java/drivers/phantomjs-1.9.7-windows/phantomjs-1.9.7-windows/phantomjs.exe";
 	//final String phantomjsBinaryPath = "/home/jenkins/phantomjs-1.9.8-linux-x86_64/bin/phantomjs";
