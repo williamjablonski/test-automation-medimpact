@@ -1,0 +1,5 @@
+echo "run command line"
+
+mvn clean install test -DbaseUrl=https://www.medimpact.com -Dcucumber.options="--tags @NewAPITests --plugin pretty --plugin html:target/cucumber --plugin json:target/cucumber.json --features src/test/java/features --monochrome true"
+
+mvn clean install test -Dcucumber.options="--features src/test/java/features --tags @NewAPITests --plugin pretty --plugin html:target/cucumber --plugin json:target/cucumber.json --monochrome true"
