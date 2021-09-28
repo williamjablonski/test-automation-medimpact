@@ -7,3 +7,4 @@ mvn clean install test -DbaseUrl="https://www.medimpact.com"
 
 # Remote
 # docker pull selenium/standalone-chrome
+# https://www.lambdatest.com/blog/run-selenium-tests-in-docker/
