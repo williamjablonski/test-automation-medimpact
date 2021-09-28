@@ -80,7 +80,7 @@ public class CrossBrowserTest extends DriverTestInstance{
 		ChromeOptions options = new ChromeOptions();
 		//driver.set(new RemoteWebDriver(new URL(remote_url_chrome), options));
 		//
-		driver = new RemoteWebDriver(new baseUrl(remote_url_chrome), options);
+		driver = new RemoteWebDriver(new "https://www.medimpact.com"(remote_url_chrome), options);
 		return driver;
 	}
 
