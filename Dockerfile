@@ -17,7 +17,7 @@ RUN apt-get install ./google-chrome*.deb --yes
 #
 #RUN mkdir /Users/admin/Downloads/chromedriver
 #RUN 
-RUN apt-get install -y unzip libgconf2-4
+RUN apt-get install -y unzip
 RUN wget -N http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip -P ~/Downloads
 RUN unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 RUN mv -f ~/Downloads/chromedriver /usr/local/share/
