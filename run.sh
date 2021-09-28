@@ -3,3 +3,7 @@
 
 # 2021 - NT Run - MEDIMPACT
 mvn clean install test -DbaseUrl="https://www.medimpact.com"
+
+
+# Remote
+# docker pull selenium/standalone-chrome
