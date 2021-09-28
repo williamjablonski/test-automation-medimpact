@@ -9,6 +9,8 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class CrossBrowserTest extends DriverTestInstance{
@@ -78,7 +80,7 @@ public class CrossBrowserTest extends DriverTestInstance{
 		ChromeOptions options = new ChromeOptions();
 		//driver.set(new RemoteWebDriver(new URL(remote_url_chrome), options));
 		//
-		driver = new RemoteWebDriver(new URL(remote_url_chrome), options);
+		driver = new RemoteWebDriver(new baseUrl(remote_url_chrome), options);
 		return driver;
 	}
 
