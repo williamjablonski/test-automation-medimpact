@@ -24,4 +24,4 @@ RUN mv -f ~/Downloads/chromedriver /usr/local/share/
 RUN chmod +x /usr/local/share/chromedriver
 RUN ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 RUN ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
-RUN cd test-automation-medimpact && sh ./run.sh
+RUN cd test-automation-medimpact && git pull origin master && sh ./run.sh
