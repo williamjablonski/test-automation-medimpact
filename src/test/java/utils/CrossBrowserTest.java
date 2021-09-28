@@ -11,19 +11,21 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
+import java.net.URL;
+import java.net.MalformedURLException;
 
 public class CrossBrowserTest extends DriverTestInstance{
 
 	////final String chromeBinary = "/Application/chrome.exe";
 	// mac
-	//final String chromeBinary = "/Users/admin/Downloads/chromedriver"; 
-	//final String webdriverChromeBinary = "/Users/admin/Downloads/chromedriver";
+	final String chromeBinary = "/Users/admin/Downloads/chromedriver"; 
+	final String webdriverChromeBinary = "/Users/admin/Downloads/chromedriver";
 	// ubuntu 20
-	final String chromeBinary = "/usr/bin/chromedriver"; 
-	final String webdriverChromeBinary = "/usr/bin/chromedriver";
+	//final String chromeBinary = "/usr/bin/chromedriver"; 
+	//final String webdriverChromeBinary = "/usr/bin/chromedriver";
 	//Grid
 	final String remote_url_chrome = "http://localhost:4445/wd/hub";
+	protected static ThreadLocal<RemoteWebDriver> driverRemote = new ThreadLocal<>();
 	
 	final String ieDriverServer = "C:/Java/drivers/IEDriverServer_x64_2.39.0/IEDriverServer.exe";
 	//final String phantomjsBinaryPath = "C:/Java/drivers/phantomjs-1.9.7-windows/phantomjs-1.9.7-windows/phantomjs.exe";
@@ -71,7 +73,7 @@ public class CrossBrowserTest extends DriverTestInstance{
 		driver = new HtmlUnitDriver(capabilities);
 		return driver;
 	}
-
+	/*
 	// Test with Selenium Grid
 	public WebDriver googleChromeGridFactoryDriver() {
 		capabilities = DesiredCapabilities.chrome();
@@ -80,10 +82,11 @@ public class CrossBrowserTest extends DriverTestInstance{
 		ChromeOptions options = new ChromeOptions();
 		//driver.set(new RemoteWebDriver(new URL(remote_url_chrome), options));
 		//
-		driver = new RemoteWebDriver(new "https://www.medimpact.com"(remote_url_chrome), options);
-		return driver;
+		driverRemote.set(new RemoteWebDriver(URL(remote_url_chrome), options));
+		return driverRemote;
 	}
 
+	*/
 
 	
 
